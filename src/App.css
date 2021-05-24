@@ -1,12 +1,18 @@
 .inLine{
-    display: inline;
+    display: inline-block;
     vertical-align: top;
 }
 img{
     width: 5vw;
+    border-radius: 50%;
+    margin-top: 3px;
 }
 .name{
-    width: 30vw;
+    margin-left: 1vw;
+    width: 20vw;
+}
+.name-header{
+    margin-left: 6vw;
 }
 .email{
     width: 25vw;
@@ -15,8 +21,17 @@ img{
     width: 15vw;
 }
 .premium{
-    width: 5vw;
+    width: 10vw;
 }
 .bid{
-    width: 10vw;
+    width: 15vw;
+}
+div{
+    padding: 5px 0;
+}
+.row{
+    background-color: lightcyan;
+}
+.row:nth-child(odd){
+    background-color: lightblue
 }

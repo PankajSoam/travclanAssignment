@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
+import TableHeader from './TableHeader';
 import UserList from './UserList';
 
 
@@ -15,7 +16,6 @@ function App(){
     const url = 'https://intense-tor-76305.herokuapp.com/merchants'
     useEffect(() => {
         loadData();
-        console.log(typeof({userData}));
     },[setUserData]);
 
 
@@ -25,17 +25,16 @@ function App(){
         const data = await res.json();
         // const data = res;
         setUserData(data);
-        console.log(data);
     }
 
     //flag to toggle min/max bid amount
     let minOrMax = 'Max';
     function toggleBid(){
         if(showMinBid){
-            minOrMax = 'Min'
+            
             setMinBid(false);
         }else{
-            minOrMax= 'Max'
+            
             setMinBid(true);
         }
     }
@@ -43,7 +42,8 @@ function App(){
 
     return(
         <div>
-            <button onClick= {toggleBid}>Toggle bid {minOrMax}</button>
+            <button onClick= {toggleBid}>Toggle bid </button>
+            <TableHeader/>
             <UserList users={userData} showMinBid={showMinBid}/>
             <h1>Initialize</h1>
         </div>

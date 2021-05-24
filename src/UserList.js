@@ -2,8 +2,7 @@ import React, { Fragment, useEffect, useState } from 'react';
 import User from './User';
 
 function UserList(props){
-    console.log(props.users[0]);
-    console.log(props.showMinBid);
+    
     const [usersList, setUsers] = useState([]);
     
 
@@ -26,7 +25,6 @@ function UserList(props){
         }
         user.bidAmountToDisplay = bid;
     })
-    console.log(usersList)
 
     const sortAccToBid = () => {
             let array = []
@@ -34,7 +32,6 @@ function UserList(props){
                     return a.bidAmountToDisplay - b.bidAmountToDisplay;
         });
         array = [...usersList]
-        console.log("sorted",usersList);
 
         setUsers(array);
         // console.log(sortedUsers);
