@@ -17,7 +17,7 @@ function UserList(props){
         <div>
             <button>Show min bid</button>
             {
-                usersList.map(user => <User userInfo={user} />)
+                usersList.map(user => <User userInfo={user} showMinBid={props.showMinBid} />)
             }
         </div>
     );
