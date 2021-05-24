@@ -1,0 +1,22 @@
+.inLine{
+    display: inline;
+    vertical-align: top;
+}
+img{
+    width: 5vw;
+}
+.name{
+    width: 30vw;
+}
+.email{
+    width: 25vw;
+}
+.phone{
+    width: 15vw;
+}
+.premium{
+    width: 5vw;
+}
+.bid{
+    width: 10vw;
+}
